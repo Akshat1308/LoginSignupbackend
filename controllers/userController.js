@@ -60,6 +60,7 @@ exports.getUserDetails = catchAsyncErrors(async (req, res, next) => {
 
 // Logout User
 exports.logout = catchAsyncErrors(async (req, res, next) => {
+    
     res.cookie("token", null, {
       expires: new Date(Date.now()),
       httpOnly: true,
@@ -71,7 +72,7 @@ exports.logout = catchAsyncErrors(async (req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.setHeader('Access-Control-Allow-Credentials', true);
   
-    
+
     res.status(200).json({
       success: true,
       message: "Logged Out",
