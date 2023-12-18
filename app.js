@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 
 app.use(cors({
-    origin: ['https://localhost:3000','*'],
+    origin: ['http://localhost:3000','*'],
     methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
     credentials: true,
     exposedHeaders: ['set-cookie'],
