@@ -2,7 +2,7 @@ const ErrorHander = require("../utils/errorhander.js");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const User = require("../models/userModel.js");
 const sendToken = require("../utils/jwtToken.js");
-
+const Course = require ("../models/CourseModel.js");
 // Register a User
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 
@@ -76,5 +76,23 @@ exports.logout = catchAsyncErrors(async (req, res, next) => {
     res.status(200).json({
       success: true,
       message: "Logged Out",
+    });
+  });
+
+  // get course
+  exports.Getcourse = catchAsyncErrors(async (req, res, next) => {
+
+// const temp = await Course.create({
+//     Coursename:"MERN stack fundaments part 2",
+//     Duration: "5 hour"
+
+// })
+
+    const data = await Course.find({})
+
+    res.status(200).json({
+      "success": true,
+      "message": "courses recieved",
+      "dataRecieved":data
     });
   });

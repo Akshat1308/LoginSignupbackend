@@ -3,7 +3,8 @@ const {
     registerUser,
     loginUser,
     getUserDetails,
-    logout
+    logout,
+    Getcourse
 } = require("../controllers/userController.js");
 const { isAuthenticatedUser } = require("../middleware/auth");
 
@@ -13,5 +14,6 @@ router.route("/register").post(registerUser);
 router.route("/login").post(loginUser);
 router.route("/logout").get(logout);
 router.route("/me").get(isAuthenticatedUser, getUserDetails);
+router.route("/course").get(Getcourse);
 
 module.exports = router;
