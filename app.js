@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 
 app.use(cors({
-    origin: ['https://master--vocal-rugelach-0befc4.netlify.app/', 'http://localhost:3000', 'https://master--vocal-rugelach-0befc4.netlify.app','*'],
+    origin: ['https://master--vocal-rugelach-0befc4.netlify.app/',  'https://master--vocal-rugelach-0befc4.netlify.app','http://localhost:3000','*'],
     methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
     credentials: true,
     exposedHeaders: ['set-cookie'],
