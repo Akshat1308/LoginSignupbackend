@@ -13,7 +13,7 @@ const sendToken = (user, statusCode, res) => {
       secure: "false"
     };
   
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin','https://master--vocal-rugelach-0befc4.netlify.app');
     res.setHeader('Access-Control-Allow-Credentials', true);
   
     res.status(statusCode).cookie("token", token, options).json({

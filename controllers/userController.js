@@ -69,7 +69,7 @@ exports.logout = catchAsyncErrors(async (req, res, next) => {
     });
   
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'https://master--vocal-rugelach-0befc4.netlify.app');
     res.setHeader('Access-Control-Allow-Credentials', true);
   
 
